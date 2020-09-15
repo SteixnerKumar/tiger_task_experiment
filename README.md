@@ -48,7 +48,7 @@ To start one has to also choose the session number which by default is from 1 to
 
 After all the sessions are recoded, on the gui, check the experiment over box and make sure the participant identifiers are correct with the correct version of the task selected. This is necessary to calculate the relative financial binus each participant will recieve based on their performance. The bonus is between 0 to 10 euros max, and only for the ITT, not TT. Press calculate and you will see the amount session wise (and a max of the sessions) in the white space below the button on the gui. Additionally, it will also be displayed on the matlab command window
 
-###### [Back to Contents](https://github.com/saurabhsay/tiger_task_experiment/blob/master/README.md#Contents)
+###### [Back to Contents](https://github.com/SteixnerKumar/tiger_task_experiment/blob/master/README.md#Contents)
 
 # Flow of code
 In the command windoe type 'tiger_task_experiment' to begin.
