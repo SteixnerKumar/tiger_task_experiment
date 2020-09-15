@@ -1,6 +1,8 @@
 # Tiger task experiment
 This is the experimental setup of the tiger task for both the single-agent (TT) and the multiagent (competitive and cooperative) (ITT) versions.
 
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)
+
 # Contents
 ## [General idea](https://github.com/SteixnerKumar/tiger_task_experiment/blob/master/README.md#general-idea-1)
 ## [The default versions used for this codebase](https://github.com/SteixnerKumar/tiger_task_experiment/blob/master/README.md#the-default-versions-used-for-this-codebase-1)
