@@ -83,11 +83,15 @@ Data Structure:
 ###### [Back to Contents](https://github.com/SteixnerKumar/tiger_task_experiment/blob/master/README.md#Contents)
 
 # Published work
-This work is presented and published in various conferences.
+This data from this experiment is presented and published in various conferences.
 
 Saurabh Kumar et al. “Modeling Cooperation and Competition in the Tiger Task”. In: (2019), pp. 638–641. doi:10.32470/ccn.2019.1057-0.
 
+[Authors: Saurabh Kumar, Tessa Rusch, University Medical Center, Germany; Prashant Doshi, University of Georgia, United States; Michael Spezio, Scripps College & University Medical Center, United States; Jan Gläscher, University Medical Center, Germany]
+
 Saurabh Kumar et al. “Modeling cooperative and competitive decision-making in the Tiger Task”. In:4th Multi-disciplinary Conference on Reinforcement Learning and Decision Making (RLDM2019)(2019), p. 105.
+
+[Authors: Saurabh Kumar, Tessa Rusch, University Medical Center, Germany; Prashant Doshi, University of Georgia, United States; Michael Spezio, Scripps College & University Medical Center, United States; Jan Gläscher, University Medical Center, Germany]
 
 
 ###### [Back to Contents](https://github.com/SteixnerKumar/tiger_task_experiment/blob/master/README.md#Contents)
