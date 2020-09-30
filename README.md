@@ -85,6 +85,11 @@ Data Structure:
 # Published work
 This data from this experiment is presented and published in various conferences.
 
+## pre-preint server:
+
+
+## Conferences
+
 Saurabh Kumar et al. “Modeling Cooperation and Competition in the Tiger Task”. In: (2019), pp. 638–641. doi:10.32470/ccn.2019.1057-0.
 
 [Authors: Saurabh Kumar, Tessa Rusch, University Medical Center, Germany; Prashant Doshi, University of Georgia, United States; Michael Spezio, Scripps College & University Medical Center, United States; Jan Gläscher, University Medical Center, Germany]
