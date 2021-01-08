@@ -1,5 +1,5 @@
 # Tiger task experiment
-This is the experimental setup of the tiger task for both the single-agent (TT) and the multiagent (competitive and cooperative) (ITT) versions.
+This is the experimental setup of the tiger task for both the single-agent (TT) and the multiagent (competitive and cooperative) (ITT) versions. Contents in the folder named 'tiger_task_experiment_code'.
 
 This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)
 
@@ -13,7 +13,7 @@ This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 Int
 ## [Contact](https://github.com/SteixnerKumar/tiger_task_experiment/blob/master/README.md#contact-1)
 
 # General idea
-This is an experimental setup of the 'tiger task'.
+This is a repository of the experimental setup of the 'tiger task'.
 
 The game is played always by a dyad (two participants) either independent of each other (TT) or with each other (ITT).
 The experiment runs on a single computer ideally connected to two screens. These screens are partly covered so that the individual participants visually only access their part of the task.
@@ -36,8 +36,8 @@ The experiment runs on a single computer ideally connected to two screens. These
 + Psychtoolbox                                          Version 3.0.14      30 December
 ###### [Back to Contents](https://github.com/SteixnerKumar/tiger_task_experiment/blob/master/README.md#Contents)
 
-# Procedure
-Shortcut: In the command windoe type 'tiger_task_experiment' to begin.
+# Procedure for the experiment
+Shortcut: When in the tiger_task_experiment_code folder, on the command window type 'tiger_task_experiment' to begin.
 
 The default structure is as follows.
 There is a folder named 'images', which has all the graphics required by the code. Missing any of this will most likely create an error. This folder is refered in the code as the current_working_directory/images, so as long as this folder exists, you are good to go. All the default location addresses can be modified if you wish manually in the wrapper ('sk_tt_experiment_wrapper.m') file.
@@ -52,51 +52,56 @@ After all the sessions are recoded, on the gui, check the experiment over box an
 
 ###### [Back to Contents](https://github.com/SteixnerKumar/tiger_task_experiment/blob/master/README.md#Contents)
 
-# Flow of code
-In the command windoe type 'tiger_task_experiment' to begin.
+# Flow of code of the experiment
+When in the tiger_task_experiment_code folder, on the command window type 'tiger_task_experiment' to begin.
 
 Sequence: 'tiger_task_experiment.m' starts the gui 'tiger_task_experiment.fig'. Pressing the begin button on the gui takes the code into the wapper 'sk_tt_experiment_wrapper.m'. This is where, one can make all the easy changes in the code, including the number of trials, etc. Then the wrapper calls the function 'sk_tt_experiment.m', which is the heart of the entire setup. This function displays the task and records all the responses. Please be very careful changing anything inside this function as it can easily break the code. Additionally the function 'sk_tt_moneywon.m' called from the gui does the bonus calculation.
 
 ###### [Back to Contents](https://github.com/SteixnerKumar/tiger_task_experiment/blob/master/README.md#Contents)
 
 # Data structure
-Data is saved in the folder 'data_storage_behaviour'. If this folder does not exist, its created on the fly. The default name of this folder can also be manually changed in the wrapper function.
+When in the tiger_task_experiment_code folder, data is saved in the folder 'data_storage_behaviour'. If this folder does not exist, its created on the fly. The default name of this folder can also be manually changed in the wrapper function.
 
 The default two file names (for one run of the experiment) are :'tt_single/multifriend-enemy_identifier_session'. Basically from the filename one can get the version of the tiger task (TT or ITT (competitive/cooperative)), the participant identifier and the session number. This format of naming is used by the script that calculates the bonus for the participants.
 
 Inside the saved file there are two structures: 'ttsk' and 'out'. The 'ttsk' structure containes all the settings of the tiger task used for the particular session. The 'out' structure contains the associated probilities in the tiger task, the definition of the columns of the data and the data matrix (the actual behavioral data).
 
-Data Structure:
+Data Structure Description:
 
 + For single-agent version (TT) :
 
 | column number: | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 |
 | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
 |column definition: | sub_id  | setting | session  | trial_your | tiger_side  | growl_side | growl_correct | action_your | action_your_rt  | forced_action_listen | reward_your  | reward_relative_your | reward_cumulative_your |
+|simple explanation: | participant identifier  | 2-single player | session number  | trial number | 1-right, 3-left, 0-door opened  | 1-right, 3-left, 0-door opened | 1-correct, 0-incorrect | 1-right open, 2-listen, 3-left open | reaction in seconds  | 1-yes, 0-no | reward points at this instance  | reward points in this particular tiger trial | reward in the session so far |
 
 + For multiagent version (ITT competitive/cooperative):
 
 | column number: | 01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 |
 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - |
 |column definition: | sub_id  | setting | session | trial_univ | trial_your | trial_partner | tiger_side | growl_side | growl_correct  | creek_side | creek_correct | action_your | action_your_rt  | prediction | prediction_rt | action_partner | action_partner_rt  | prediction_partner | prediction_partner_rt | forced_action_listen | forced_prediction_listen  | prediction_correct | reward_your  | reward_relative_your | reward_cumulative_your | reward_partner | reward_relative_partner | reward_cumulative_partner |
+|simple explanation: | participant identifier  | 4-competitive, 5-cooperative | session number | overall trial number | personal trial number for the participant | trial number of the other player | 1-right, 3-left, 0-door opened | 1-right, 3-left, 0-door opened | 1-correct, 0-incorrect  | 1-right, 3-left, 0-no creek | 1-correct, 0-incorrect | 1-right open, 2-listen, 3-left open | reaction in seconds  | 1-right open, 2-listen, 3-left open | reaction in seconds | 1-right open, 2-listen, 3-left open | reaction in seconds  | 1-right open, 2-listen, 3-left open | reaction in seconds | 1-yes, 0-no | 1-yes, 0-no  | 1-yes, 0-no | reward points at this instance  | reward points in this particular tiger trial | reward in the session so far | reward points at this instance for other player | reward points in this particular tiger trial for other player | reward in the session so far for other player |
+
 
 ###### [Back to Contents](https://github.com/SteixnerKumar/tiger_task_experiment/blob/master/README.md#Contents)
 
 # Published work
-This data from this experiment is presented and published in various conferences.
+This data is presented in conferences and published on the preprint server.
 
-## pre-preint server:
+## Pre-print server:
+Steixner-Kumar, S., Rusch, T., Doshi, P., Gläscher, J., & Spezio, M. (2020, November 3). Humans depart from optimal computational models of socially interactive decision-making under partial information. https://doi.org/10.31234/osf.io/rcq25
 
+[Authors: Saurabh Steixner-Kumar, University Medical Center, Germany; Tessa Rusch, California Institute of Technology, CA, USA; Prashant Doshi, University of Georgia, United States; Jan Gläscher, University Medical Center, Germany; Michael Spezio, Scripps College & University Medical Center, United States]
 
 ## Conferences
 
 Saurabh Kumar et al. “Modeling Cooperation and Competition in the Tiger Task”. In: (2019), pp. 638–641. doi:10.32470/ccn.2019.1057-0.
 
-[Authors: Saurabh Kumar, Tessa Rusch, University Medical Center, Germany; Prashant Doshi, University of Georgia, United States; Michael Spezio, Scripps College & University Medical Center, United States; Jan Gläscher, University Medical Center, Germany]
+[Authors: Saurabh Steixner-Kumar, Tessa Rusch, University Medical Center, Germany; Prashant Doshi, University of Georgia, United States; Michael Spezio, Scripps College & University Medical Center, United States; Jan Gläscher, University Medical Center, Germany]
 
 Saurabh Kumar et al. “Modeling cooperative and competitive decision-making in the Tiger Task”. In:4th Multi-disciplinary Conference on Reinforcement Learning and Decision Making (RLDM2019)(2019), p. 105.
 
-[Authors: Saurabh Kumar, Tessa Rusch, University Medical Center, Germany; Prashant Doshi, University of Georgia, United States; Michael Spezio, Scripps College & University Medical Center, United States; Jan Gläscher, University Medical Center, Germany]
+[Authors: Saurabh Steixner-Kumar, Tessa Rusch, University Medical Center, Germany; Prashant Doshi, University of Georgia, United States; Michael Spezio, Scripps College & University Medical Center, United States; Jan Gläscher, University Medical Center, Germany]
 
 
 ###### [Back to Contents](https://github.com/SteixnerKumar/tiger_task_experiment/blob/master/README.md#Contents)
